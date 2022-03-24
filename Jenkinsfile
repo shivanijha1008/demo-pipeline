@@ -8,7 +8,7 @@ parameters{
 stages {
    stage('Read demo file') {
             steps {
-                sh "cat ${param.FileName}"
+                sh "cat ${params.FileName}"
             }
         }
     stage('Read Readme.md file') {
@@ -16,7 +16,11 @@ stages {
                 sh 'cat README.md'
             }
         }
-    
+    stage('Read from choice') {
+            steps {
+                sh "cat ${params.FileList}.txt"
+            }
+}
 }
 
 }
