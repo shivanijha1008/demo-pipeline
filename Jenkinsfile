@@ -1,11 +1,10 @@
 pipeline {
     
 agent { node { label 'master' } } 
-parameters{
-        string(name:'Filename', defaultValue:'', description:' Pls supply filename')
+parameters {
+        string(name: 'FileName', defaultValue: '', description: 'Pls supply filename')
         choice(name: 'FileList', choices: ['demo', 'ajay'], description: 'Pick File')
-}
-
+ }
 stages {
    stage('Read demo file') {
             steps {
@@ -19,7 +18,10 @@ stages {
         }
     stage('Read from choice') {
             steps {
-                sh "cat ${params.FileList}.txt"
+               sh "cat ${params.FileList}.txt"
             }
+        }
+
 }
+
 }
