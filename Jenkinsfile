@@ -3,6 +3,7 @@ pipeline {
 agent { node { label 'master' } } 
 parameters{
         string(name:'Filename', defaultValue:'', description:' Pls supply filename')
+        choice(name: 'FileList', choices: ['demo', 'ajay'], description: 'Pick File')
 }
 
 stages {
@@ -22,6 +23,3 @@ stages {
             }
 }
 }
-
-}
-
