@@ -8,7 +8,7 @@ pipeline {
             }
         }
         
-        stage {'Read Readme.md file'}
+        stage{'Read Readme.md file'}
         steps{
             sh 'cat README.md'
         }
