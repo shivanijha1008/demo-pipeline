@@ -2,7 +2,7 @@ pipeline {
     
 agent { node { label 'master' } } 
 parameters{
-        string(name:'Filename', defaultvalue:'', description:' Pls supply filename')
+        string(name:'Filename', defaultValue:'', description:' Pls supply filename')
 }
 
 stages {
